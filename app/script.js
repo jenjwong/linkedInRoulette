@@ -2,8 +2,10 @@
     // create the module and name it mvpApp
         // also include ngRoute for all our routing needs
     var mvpApp = angular.module('mvpApp', [
+      //what does this part do?
       'ngRoute',
-      'mvpApp.mainController'
+      'mvpApp.mainController',
+      'mvpApp.services'
     ]);
 
     // configure our routes
@@ -12,7 +14,7 @@
 
             // route for the home page
             .when('/', {
-                templateUrl : 'pages/home.html',
+                templateUrl : 'pages/main.html',
                 controller  : 'mainController'
             })
 
