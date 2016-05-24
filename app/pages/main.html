@@ -1,8 +1,30 @@
 
+<header>
+    <nav ng-hide="landing">
+    <div class="container">
+        <div class="navbar-header">
+          <a href="#">Linkedin Roulette</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+
+            <li><a href="#about"><i class="fa fa-bolt" aria-hidden="true"></i> Play</a></li>
+            <!-- <li><a href="#landing"><i class="fa fa-comment"></i> Contact</a></li> -->
+        </ul>
+    </div>
+    </nav>
+</header>
 
 
-<div ng-repeat="item in studentData">
-  <h1> {{ item.name }} </h1>
 
+
+<label class="search">Search: <input ng-model="searchText"></label>
+<div ng-repeat="item in studentData | filter:searchText">
+  <span>
+    <p> {{ item.name }} </p>
   <img ng-src="{{ item.image }} " alt="Description" />
+  </span>
+  <span>
+
+  </span>
 </div>

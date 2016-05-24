@@ -5,7 +5,8 @@
       //what does this part do?
       'ngRoute',
       'mvpApp.mainController',
-      'mvpApp.services'
+      'mvpApp.services',
+      'mvpApp.Utils'
     ]);
 
     // configure our routes
@@ -13,7 +14,7 @@
         $routeProvider
 
             // route for the home page
-            .when('/', {
+            .when('/main', {
                 templateUrl : 'pages/main.html',
                 controller  : 'mainController'
             })
@@ -25,8 +26,8 @@
             })
 
             // route for the contact page
-            .when('/contact', {
-                templateUrl : 'pages/contact.html',
+            .when('/', {
+                templateUrl : 'pages/landing.html',
                 controller  : 'contactController'
             });
     });
@@ -39,5 +40,5 @@
     });
 
     mvpApp.controller('contactController', function($scope) {
-        $scope.message = 'Contact us! JK. This is just a demo.';
+        $scope.landing = true;
     });
