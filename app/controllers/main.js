@@ -9,6 +9,15 @@ angular.module('mvpApp.mainController', [])
     $scope.studentData = shuffled;
   });
 
+  $scope.submitForm = function(isValid) {
+    console.log('i got called')
+
+  // check to make sure the form is completely valid
+  if (isValid) {
+    alert('our form is amazing');
+  }
+
+  };
 
 
 
