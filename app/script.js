@@ -14,7 +14,7 @@
         $routeProvider
 
             // route for the home page
-            .when('/main', {
+            .when('/', {
                 templateUrl : 'pages/main.html',
                 controller  : 'mainController'
             })
@@ -26,7 +26,7 @@
             })
 
             // route for the contact page
-            .when('/', {
+            .when('/landing', {
                 templateUrl : 'pages/landing.html',
                 controller  : 'contactController'
             });

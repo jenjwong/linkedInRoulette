@@ -1,21 +1,17 @@
 angular.module('mvpApp.mainController', [])
 
-.controller('mainController', function($scope, Students, Utils) {
+.controller('mainController', function($scope, Ajax, Utils) {
     // create a message to display in our view
 
-  Students.get()
+  Ajax.get()
   .success(function(data) {
     var shuffled = Utils.shuffle(data);
     $scope.studentData = shuffled;
+    console.log(data);
   });
 
-  $scope.submitForm = function(isValid) {
-    console.log('i got called')
-
-  // check to make sure the form is completely valid
-  if (isValid) {
-    alert('our form is amazing');
-  }
+  $scope.submitForm = function(user) {
+    console.log(user.cohort.$modelValue, 'this is user')
 
   };
 

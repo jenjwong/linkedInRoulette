@@ -3,7 +3,7 @@ angular.module('mvpApp.services', [])
 
     // super simple service
     // each function returns a promise object
-    .factory('Students', function($http) {
+    .factory('Ajax', function($http) {
         return {
             get : function() {
                 return $http.get('https://hr-yearbook.herokuapp.com/api/students');

@@ -2,7 +2,7 @@ body {
   margin: 0;
   margin-top: 10px;
   font-family: 'Fredericka the Great', cursive;
-  font-size: 350%;
+  font-size: 340%;
   padding-left: 100px;
 }
 
@@ -30,6 +30,11 @@ a:active {
     text-decoration: none;
 }
 
+.signup {
+  font-size: 150%;
+  padding-left: 340px;
+
+}
 
 .search {
   padding-bottom: 40px;
@@ -43,6 +48,13 @@ nav {
   padding-bottom: 100px;
   padding-top: 50px;
   font-size: 175%;
+}
+
+.jumbotron {
+  margin: 120px;
+  width: 900px;
+  float: right;
+  margin-right: 100px;
 }
 
 
