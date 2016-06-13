@@ -6,13 +6,16 @@ angular.module('mvpApp.services', [])
     .factory('Ajax', function($http) {
         return {
             get : function() {
-                return $http.get('https://hr-yearbook.herokuapp.com/api/students');
+                return $http.get('http://localhost:3000/user');
             },
             create : function(todoData) {
-                return $http.post('/api/todos', todoData);
+                return $http.post('/user', todoData);
+            },
+            create : function(todoData) {
+                return $http.post('/user', todoData);
             },
             delete : function(id) {
-                return $http.delete('/api/todos/' + id);
+                return $http.delete('/user/' + id);
             }
         }
     });

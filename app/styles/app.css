@@ -58,7 +58,11 @@ nav {
 }
 
 
-
 .landing {
   font-size: 500%;
+}
+
+.list {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }

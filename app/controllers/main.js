@@ -11,9 +11,11 @@ angular.module('mvpApp.mainController', [])
   });
 
   $scope.submitForm = function(user) {
-    console.log(user.cohort.$modelValue, 'this is user')
-
+    console.log(user)
+    // console.log(user.cohort.$modelValue, 'this is user')
   };
+
+
 
 
 
