@@ -26,7 +26,7 @@ module.exports.getAllUsers = function(callback) {
 
 module.exports.updateOne = function(req, res) {
   console.log(req.body.Github)
-  var query = {LastName: req.body.LastName};
+  var query = {Github: req.body.Github};
   var updatedProps = {LinkedIn: req.body.LinkedIn};
   var options = {new: true, upsert: true};
   User.findOneAndUpdate(query, updatedProps, options, function(err, response) {

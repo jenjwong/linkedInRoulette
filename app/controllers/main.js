@@ -11,8 +11,9 @@ angular.module('mvpApp.mainController', [])
   });
 
   $scope.submitForm = function(user) {
-    console.log(user)
-    // console.log(user.cohort.$modelValue, 'this is user')
+    var payload = {LinkedIn: user.linkedin.$modelValue,
+                   Github: user.github.$modelValue}
+    Ajax.put(payload);
   };
 
 

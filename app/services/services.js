@@ -8,14 +8,11 @@ angular.module('mvpApp.services', [])
             get : function() {
                 return $http.get('http://localhost:3000/user');
             },
-            create : function(todoData) {
-                return $http.post('/user', todoData);
+            create : function(payloadData) {
+                return $http.post('http://localhost:3000/user', payloadData);
             },
-            create : function(todoData) {
-                return $http.post('/user', todoData);
-            },
-            delete : function(id) {
-                return $http.delete('/user/' + id);
+            put : function(payloadData) {
+                return $http.put('http://localhost:3000/user', payloadData);
             }
         }
     });
