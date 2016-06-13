@@ -14,9 +14,15 @@ angular.module('mvpApp.mainController', [])
     var payload = {LinkedIn: user.linkedin.$modelValue,
                    Github: user.github.$modelValue}
     Ajax.put(payload);
-    // var payload = {LinkedIn: '',
-    //                Github: ''}
-    // Ajax.get();
+    console.log('whyyyyy')
+    $scope.user.linkedin= "";
+    $scope.user.github = "";
+    Ajax.get()
+    .success(function(data) {
+      var shuffled = Utils.shuffle(data);
+      $scope.studentData = shuffled;
+      console.log(data);
+    });
   };
 
 

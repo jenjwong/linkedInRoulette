@@ -16,11 +16,10 @@
 </header>
 
 
-<div class="jumbotron"> <label class="center"> LinkedIn Roulette Pre-Instructions:</label>
-<p class="small">LinkedIn Roulette allows Hack Reactor students to endorse each other en mass without the appearance of having done so. If your LinkedIn profile has the same few people endorsing your  skills your profile looses credibility. LinkedIn Roulette makes it look like a more diverse pool of people have endorsed your skills.</p>
-<p>1. Enter your GitHub handle and LinkedIn in the form below.</p>
-<p>2. Go through the list below and connect with classmates on LinkedIn. You will probably have to check back in a few days to do this once everyone
-  has added themselves.</p>
+<div class="jumbotron" class="col-md-6"> <label class="center"> LinkedIn Roulette Pre-Instructions:</label>
+<p class="small">LinkedIn Roulette allows Hack Reactor students to endorse each other en mass without the appearance of having done so. If your LinkedIn profile has the same few people endorsing your  skills your profile loses credibility. LinkedIn Roulette makes it look like a more diverse pool of people have endorsed your skills. We will do LinkedIn Roulette face to face in a group setting, but it requires some set-up, so please follow the steps below:</p>
+<p>1. Enter your GitHub handle and LinkedIn in the form.</p>
+<p>2. Go through the list below and connect with classmates on LinkedIn. You will probably have to check back in a few days once everyone adds themselves to the list. This step is super important. Make sure you do it before the LinkedIn Roulette session!</p>
 <p>3. Go to your LinkedIn profile and choose your top 9 skills for which you'd like to be endorsed. Put these at the top of your Skills and Endorsements List.</p>
 <p>4. Wait for the LinkedIn Roulette session later this week to endorse people.</p>
 <p></p>
@@ -29,16 +28,15 @@
   <!-- pass in the variable if our form is valid or invalid -->
   <form name="userForm" ng-submit="submitForm(userForm)" novalidate> <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
 
+
       <!-- NAME -->
-      <!-- NAME -->
-      <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+      <div class="form-group">
         <label>Enter your GitHub Handle</label>
         <input type="text" name="github" class="form-control" ng-model="user.github" required>
-        <p ng-show="userForm.github.$invalid && !userForm.github.$pristine" class="help-block">Your name is required</p>
       </div>
 
       <div class="form-group" ng-class="{ 'has-error' : userForm.linkedin.$invalid && !userForm.linkedin.$pristine }">
-        <label>Link to LinkedIn Profile  <i class="fa fa-linkedin-square" aria-hidden="true"></i></label>
+        <label><i class="fa fa-linkedin-square" aria-hidden="true"></i>  Link to LinkedIn Profile in this format: linkedin.com/in/jenjwong  </label>
         <input type="text" name="linkedin" class="form-control" ng-model="user.linkedin" ng-minlength="3" ng-maxlength="50">
         <p ng-show="userForm.linkedin.$error.minlength" class="help-block">Linkedin is too short.</p>
         <p ng-show="userForm.linkedin.$error.maxlength" class="help-block">Linkedin is too long.</p>
@@ -63,7 +61,7 @@
     <span>
       <p> {{ item.FirstName }}  {{ item.LastName }} </p>
       <script> filterName = item.LastName </script>
-      <p ng-hide="{{item.Github}}"><a ng-href="https://github.com/{{item.Github}}" target="_blank">GitHub:  {{item.Github}}</a></p>
+      <p ng-hide="{{item.Github}}"><a ng-href="{{item.Github}}" target="_blank">GitHub:  {{item.Github}}</a></p>
       <p ng-hide="{{item.LinkedIn}}"><a ng-href="https://{{item.LinkedIn}}" target="_blank">{{item.LinkedIn}}</a></p>
     </span>
   </div>

@@ -2,7 +2,7 @@ body {
   margin: 0;
   margin-top: 10px;
   font-family: 'Fredericka the Great', cursive;
-  font-size: 340%;
+  font-size: 200%;
   padding-left: 100px;
 }
 
@@ -48,7 +48,7 @@ main {
 nav {
 
   padding-top: 50px;
-  font-size: 175%;
+  font-size: 225%;
 }
 
 .jumbotron {
@@ -71,5 +71,5 @@ nav {
 
 .list {
   padding-bottom: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
