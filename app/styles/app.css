@@ -32,7 +32,8 @@ a:active {
 
 .signup {
   font-size: 150%;
-  padding-left: 340px;
+  margin: auto;
+
 
 }
 
@@ -45,16 +46,22 @@ main {
 }
 
 nav {
-  padding-bottom: 100px;
+
   padding-top: 50px;
   font-size: 175%;
 }
 
 .jumbotron {
   margin: 120px;
-  width: 900px;
-  float: right;
+  width: 400;
+
+
   margin-right: 100px;
+}
+
+.small {
+  font-size: 75%;
+  padding-bottom: 20px;
 }
 
 

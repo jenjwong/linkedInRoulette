@@ -14,6 +14,9 @@ angular.module('mvpApp.mainController', [])
     var payload = {LinkedIn: user.linkedin.$modelValue,
                    Github: user.github.$modelValue}
     Ajax.put(payload);
+    // var payload = {LinkedIn: '',
+    //                Github: ''}
+    // Ajax.get();
   };
 
 

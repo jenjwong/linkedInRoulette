@@ -16,12 +16,15 @@
 </header>
 
 
-<div class="jumbotron"> <label class="signup"> LinkedIn Roulette Sign-Up </label>
-<p>1. Enter your GitHub handle and LinkedIn in the form below</p>
-<p>2. Connect with classmates on LinkedIn. You will probably have to check back in a few days to do this once everyone
-  has added themselves</p>
-<p>3. Go to your LinkedIn profile and choose your top 12 skills for which you'd like to be endorsed. Put these at the top of your Skills and Endorsements List</p>
-<p>4. Wait for the LinkedIn Roulette session later this week to endorse people. LinkedIn Roulette is designed so that Hack Reactor students can endorse each other en mass, without the appearance of having done so. If your LinkedIn profile has the same few people endorsing your for skills your profile looses credibility. LinkedIn Roulette makes it look like a more diverse pool of people have endorsed your skill sets.
+<div class="jumbotron"> <label class="center"> LinkedIn Roulette Pre-Instructions:</label>
+<p class="small">LinkedIn Roulette allows Hack Reactor students to endorse each other en mass without the appearance of having done so. If your LinkedIn profile has the same few people endorsing your  skills your profile looses credibility. LinkedIn Roulette makes it look like a more diverse pool of people have endorsed your skills.</p>
+<p>1. Enter your GitHub handle and LinkedIn in the form below.</p>
+<p>2. Go through the list below and connect with classmates on LinkedIn. You will probably have to check back in a few days to do this once everyone
+  has added themselves.</p>
+<p>3. Go to your LinkedIn profile and choose your top 9 skills for which you'd like to be endorsed. Put these at the top of your Skills and Endorsements List.</p>
+<p>4. Wait for the LinkedIn Roulette session later this week to endorse people.</p>
+<p></p>
+
   <!-- FORM -->
   <!-- pass in the variable if our form is valid or invalid -->
   <form name="userForm" ng-submit="submitForm(userForm)" novalidate> <!-- novalidate prevents HTML5 validation since we will be validating ourselves -->
@@ -47,20 +50,21 @@
 
 </div>
 
+<p class="small">Pro tip: While clicking links to LinkedIn profiles hold down the command key ⌘ (this will keep you on the same page, but will allow you to open all the tabs)</p>
 
 
 
-<input class="form-control" ng-model="searchText">
+
+
+
+<label class="search">Search: <input class="form-control" ng-model="searchText"></label>
 <div ng-repeat="item in studentData | filter:searchText">
   <div class="list">
-    <span >
-      <!-- <p> {{ item.HRxx }} </p> -->
+    <span>
       <p> {{ item.FirstName }}  {{ item.LastName }} </p>
       <script> filterName = item.LastName </script>
-      <p ng-hide="{{item.Github}}"><a ng-href="https://github.com/{{item.Github}}" target="_blank">GitHub</a></p>
+      <p ng-hide="{{item.Github}}"><a ng-href="https://github.com/{{item.Github}}" target="_blank">GitHub:  {{item.Github}}</a></p>
       <p ng-hide="{{item.LinkedIn}}"><a ng-href="https://{{item.LinkedIn}}" target="_blank">{{item.LinkedIn}}</a></p>
     </span>
   </div>
-  <span>
-  </span>
 </div>
